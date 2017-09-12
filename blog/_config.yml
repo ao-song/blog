@@ -78,5 +78,5 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/ao-song/ao-song.github.io.git
+  repo: git@github.com:ao-song/ao-song.github.io.git
   branch: master
