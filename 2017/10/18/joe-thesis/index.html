@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="闲居笔记">
 <meta property="og:description" content="这几天在读Armstrong关于erlang的博士论文，这里做一点笔记。 Definition of an architecture A problem domain - what type of problem is the architecture designed to solve? A philosophy - reasoning behind the method of software">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-18T09:44:20.337Z">
+<meta property="og:updated_time" content="2017-10-18T10:43:36.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paper of Erlang">
 <meta name="twitter:description" content="这几天在读Armstrong关于erlang的博士论文，这里做一点笔记。 Definition of an architecture A problem domain - what type of problem is the architecture designed to solve? A philosophy - reasoning behind the method of software">
@@ -377,6 +377,19 @@
 <li>A way of describing things - the interfaces to a component, a communication protocol between components, static and dynamic structure of the system.</li>
 <li>A way of configuring things - how to start, stop, configure the system. re-configure in operation.</li>
 </ul>
+<h2 id="Problem-domain"><a href="#Problem-domain" class="headerlink" title="Problem domain"></a>Problem domain</h2><p>The problem domain here is what erlang was initially designed for, actually a telecom system.</p>
+<ul>
+<li><strong>Concurrency</strong> - Be able to handle a very large numbers of concurrent activities.</li>
+<li>Soft real-time - Actions must be performed at a certain point in time or within a certain time.</li>
+<li><strong>Distributed</strong> - System must be distributed over several computers.</li>
+<li>Hardware interaction - The system is used to control hardware(eh..).</li>
+<li>Large software systems - The software systems are very large.</li>
+<li>Complex functionality - The system exhibits complex functionality such as feature interaction.</li>
+<li><strong>Continuous operation</strong> - The system should be in continuous operation for many years.</li>
+<li><strong>Hot upgrade</strong> - Software maintainance should be performed without stopping the system.</li>
+<li><strong>Quality requirements</strong> - Stringent quality and reliability requirements.</li>
+<li><strong>Fault tolerance</strong> - Fault toerance both to hardware failures and software errors must be provided.</li>
+</ul>
 
       
     </div>
@@ -562,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-of-an-architecture"><span class="nav-number">1.</span> <span class="nav-text">Definition of an architecture</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-of-an-architecture"><span class="nav-number">1.</span> <span class="nav-text">Definition of an architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-domain"><span class="nav-number">2.</span> <span class="nav-text">Problem domain</span></a></li></ol></div>
             
 
           </div>
