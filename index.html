@@ -278,6 +278,169 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/18/joe-thesis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="米大先生">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲居笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/18/joe-thesis/" itemprop="url">Paper of Erlang</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-18T11:27:43+02:00">
+                2017-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-Language/" itemprop="url" rel="index">
+                    <span itemprop="name">Programming Language</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这几天在读<em>Armstrong</em>关于<em>erlang</em>的博士论文，这里做一点笔记。</p>
+<h2 id="Definition-of-an-architecture"><a href="#Definition-of-an-architecture" class="headerlink" title="Definition of an architecture"></a>Definition of an architecture</h2><ul>
+<li>A problem domain - what type of problem is the architecture designed to solve?</li>
+<li>A philosophy - reasoning behind the method of software construction, the central ideas in the architecture.</li>
+<li>A set of construction guidelines - how to program and maintain the system following the underlying philosophy.</li>
+<li>A set of pre-defined components - easier than design from scratch, like OTP.</li>
+<li>A way of describing things - the interfaces to a component, a communication protocol between components, static and dynamic structure of the system.</li>
+<li>A way of configuring things - how to start, stop, configure the system. re-configure in operation.</li>
+</ul>
+<h2 id="Problem-domain"><a href="#Problem-domain" class="headerlink" title="Problem domain"></a>Problem domain</h2><p>The problem domain here is what erlang was initially designed for, actually a telecom system.</p>
+<ul>
+<li><strong>Concurrency</strong> - Be able to handle a very large numbers of concurrent activities.</li>
+<li>Soft real-time - Actions must be performed at a certain point in time or within a certain time.</li>
+<li><strong>Distributed</strong> - System must be distributed over several computers.</li>
+<li>Hardware interaction - The system is used to control hardware(eh..).</li>
+<li>Large software systems - The software systems are very large.</li>
+<li>Complex functionality - The system exhibits complex functionality such as feature interaction.</li>
+<li><strong>Continuous operation</strong> - The system should be in continuous operation for many years.</li>
+<li><strong>Hot upgrade</strong> - Software maintainance should be performed without stopping the system.</li>
+<li><strong>Quality requirements</strong> - Stringent quality and reliability requirements.</li>
+<li><strong>Fault tolerance</strong> - Fault toerance both to hardware failures and software errors must be provided.</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/19/ci/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -602,7 +765,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -613,7 +776,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -624,7 +787,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
