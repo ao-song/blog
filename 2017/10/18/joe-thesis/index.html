@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="闲居笔记">
 <meta property="og:description" content="这几天在读Armstrong关于erlang的博士论文，这里做一点笔记。 Definition of an architecture A problem domain - what type of problem is the architecture designed to solve? A philosophy - reasoning behind the method of software">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-18T10:51:08.616Z">
+<meta property="og:updated_time" content="2017-10-19T09:10:48.178Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paper of Erlang">
 <meta name="twitter:description" content="这几天在读Armstrong关于erlang的博士论文，这里做一点笔记。 Definition of an architecture A problem domain - what type of problem is the architecture designed to solve? A philosophy - reasoning behind the method of software">
@@ -390,6 +390,12 @@
 <li><strong>Quality requirements</strong> - Stringent quality and reliability requirements.</li>
 <li><strong>Fault tolerance</strong> - Fault toerance both to hardware failures and software errors must be provided.</li>
 </ul>
+<h2 id="Philosophy-in-brief"><a href="#Philosophy-in-brief" class="headerlink" title="Philosophy in brief"></a>Philosophy in brief</h2><ul>
+<li>A hierarchy of tasks -&gt; strong encapsulation method, strong encapsulation for error isolation -&gt; isolated processes -&gt; concurrent programs</li>
+<li>Language process over OS process -&gt; OSs irrelevant, much lighter-weight than OS process, easy to port to specialised environments like embedded systems.</li>
+<li>Applications structured using large numbers of communicating parallel processes -&gt; provides an architectural infrastructure, potential efficiency, <strong>fault isolation</strong>.</li>
+</ul>
+<p><strong>In generall, the essential thing is that to build large reliable systems by partitioning the system into independent parallel processes, and by providing mechanisms for monitoring and restarting these processes.</strong></p>
 
       
     </div>
@@ -575,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-of-an-architecture"><span class="nav-number">1.</span> <span class="nav-text">Definition of an architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-domain"><span class="nav-number">2.</span> <span class="nav-text">Problem domain</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-of-an-architecture"><span class="nav-number">1.</span> <span class="nav-text">Definition of an architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-domain"><span class="nav-number">2.</span> <span class="nav-text">Problem domain</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Philosophy-in-brief"><span class="nav-number">3.</span> <span class="nav-text">Philosophy in brief</span></a></li></ol></div>
             
 
           </div>
