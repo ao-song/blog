@@ -393,6 +393,12 @@
 <li><strong>Quality requirements</strong> - Stringent quality and reliability requirements.</li>
 <li><strong>Fault tolerance</strong> - Fault toerance both to hardware failures and software errors must be provided.</li>
 </ul>
+<h2 id="Philosophy-in-brief"><a href="#Philosophy-in-brief" class="headerlink" title="Philosophy in brief"></a>Philosophy in brief</h2><ul>
+<li>A hierarchy of tasks -&gt; strong encapsulation method, strong encapsulation for error isolation -&gt; isolated processes -&gt; concurrent programs</li>
+<li>Language process over OS process -&gt; OSs irrelevant, much lighter-weight than OS process, easy to port to specialised environments like embedded systems.</li>
+<li>Applications structured using large numbers of communicating parallel processes -&gt; provides an architectural infrastructure, potential efficiency, <strong>fault isolation</strong>.</li>
+</ul>
+<p><strong>In generall, the essential thing is that to build large reliable systems by partitioning the system into independent parallel processes, and by providing mechanisms for monitoring and restarting these processes.</strong></p>
 
           
         
