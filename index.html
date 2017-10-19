@@ -399,6 +399,37 @@
 <li>Applications structured using large numbers of communicating parallel processes -&gt; provides an architectural infrastructure, potential efficiency, <strong>fault isolation</strong>.</li>
 </ul>
 <p><strong>In generall, the essential thing is that to build large reliable systems by partitioning the system into independent parallel processes, and by providing mechanisms for monitoring and restarting these processes.</strong></p>
+<h2 id="Concurrency-oriented-programming"><a href="#Concurrency-oriented-programming" class="headerlink" title="Concurrency oriented programming"></a>Concurrency oriented programming</h2><h3 id="Programming-by-observing-the-real-world"><a href="#Programming-by-observing-the-real-world" class="headerlink" title="Programming by observing the real world"></a>Programming by observing the real world</h3><ul>
+<li>Identify all the truly concurrent activities.</li>
+<li>Identify all message channels between the activities.</li>
+<li>Write down all the messages which can flow in the channels.</li>
+</ul>
+<h3 id="Properties-of-COPL-Concurrency-Oriented-Programming-Language"><a href="#Properties-of-COPL-Concurrency-Oriented-Programming-Language" class="headerlink" title="Properties of COPL(Concurrency Oriented Programming Language)"></a>Properties of COPL(Concurrency Oriented Programming Language)</h3><ul>
+<li>COPLs must support processes. A process can be considered as a self-contained virtual machine.</li>
+<li>Processes must be strongly isolated.</li>
+<li>Each process must be identified by a unique ID.</li>
+<li>There should be no shared state between processes.</li>
+<li>Message passing is assumed to be unreliable.</li>
+<li>It should be possible for one process to detect failure in another process.</li>
+</ul>
+<h3 id="Process-isolation"><a href="#Process-isolation" class="headerlink" title="Process isolation"></a>Process isolation</h3><ul>
+<li>Processes have “share nothing” semantics.</li>
+<li>Message passing is the only way to pass data between processes.</li>
+<li>Message passing is asynchronous.</li>
+<li>Since nothing is shared, everything necessary to perform a distributed computation must be copied.</li>
+</ul>
+<h3 id="Names-of-processes"><a href="#Names-of-processes" class="headerlink" title="Names of processes"></a>Names of processes</h3><ul>
+<li>Impossible to guess the name of a process.</li>
+<li>Process should know its name.</li>
+<li>A parent process knows the names of its children.</li>
+</ul>
+<p>Knowing the name of a process is the key element of security.</p>
+<h3 id="Message-passing"><a href="#Message-passing" class="headerlink" title="Message passing"></a>Message passing</h3><ul>
+<li>Atomic, either delivered in its entirety or not at all.</li>
+<li>Message passing between processes should be ordered.</li>
+<li>Message should only contain constants and/or PIDs.</li>
+</ul>
+<h2 id="Essential-requirements"><a href="#Essential-requirements" class="headerlink" title="Essential requirements"></a>Essential requirements</h2><p>Concurrency, Error encapsulation, Fault detection, Fault identification, Code upgrade, Stable storage.</p>
 
           
         
