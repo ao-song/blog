@@ -28,4 +28,9 @@ The problem domain here is what erlang was initially designed for, actually a te
 - **Quality requirements** \- Stringent quality and reliability requirements.
 - **Fault tolerance** \- Fault toerance both to hardware failures and software errors must be provided.
 
+## Philosophy in brief
+- A hierarchy of tasks -> strong encapsulation method, strong encapsulation for error isolation -> isolated processes -> concurrent programs
+- Language process over OS process -> OSs irrelevant, much lighter-weight than OS process, easy to port to specialised environments like embedded systems.
+- Applications structured using large numbers of communicating parallel processes -> provides an architectural infrastructure, potential efficiency, **fault isolation**.
 
+**In generall, the essential thing is that to build large reliable systems by partitioning the system into independent parallel processes, and by providing mechanisms for monitoring and restarting these processes.**
