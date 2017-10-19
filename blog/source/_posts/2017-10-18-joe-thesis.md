@@ -15,6 +15,8 @@ categories: Programming Language
 - A way of describing things \- the interfaces to a component, a communication protocol between components, static and dynamic structure of the system.
 - A way of configuring things \- how to start, stop, configure the system. re-configure in operation.
 
+<!-- more -->
+
 ## Problem domain
 The problem domain here is what erlang was initially designed for, actually a telecom system.
 - **Concurrency** \- Be able to handle a very large numbers of concurrent activities.
@@ -34,3 +36,40 @@ The problem domain here is what erlang was initially designed for, actually a te
 - Applications structured using large numbers of communicating parallel processes -> provides an architectural infrastructure, potential efficiency, **fault isolation**.
 
 **In generall, the essential thing is that to build large reliable systems by partitioning the system into independent parallel processes, and by providing mechanisms for monitoring and restarting these processes.**
+
+## Concurrency oriented programming
+
+### Programming by observing the real world
+- Identify all the truly concurrent activities.
+- Identify all message channels between the activities.
+- Write down all the messages which can flow in the channels.
+
+### Properties of COPL(Concurrency Oriented Programming Language)
+- COPLs must support processes. A process can be considered as a self-contained virtual machine.
+- Processes must be strongly isolated.
+- Each process must be identified by a unique ID.
+- There should be no shared state between processes.
+- Message passing is assumed to be unreliable.
+- It should be possible for one process to detect failure in another process.
+
+### Process isolation
+- Processes have "share nothing" semantics.
+- Message passing is the only way to pass data between processes.
+- Message passing is asynchronous.
+- Since nothing is shared, everything necessary to perform a distributed computation must be copied.
+
+### Names of processes
+- Impossible to guess the name of a process.
+- Process should know its name.
+- A parent process knows the names of its children.
+
+Knowing the name of a process is the key element of security.
+
+### Message passing
+- Atomic, either delivered in its entirety or not at all.
+- Message passing between processes should be ordered.
+- Message should only contain constants and/or PIDs.
+
+## Essential requirements
+Concurrency, Error encapsulation, Fault detection, Fault identification, Code upgrade, Stable storage.
+
