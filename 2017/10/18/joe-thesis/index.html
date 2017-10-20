@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="闲居笔记">
 <meta property="og:description" content="这几天在读Armstrong关于erlang的博士论文，这里做一点笔记。 Definition of an architecture A problem domain - what type of problem is the architecture designed to solve? A philosophy - reasoning behind the method of software">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-19T15:35:08.024Z">
+<meta property="og:updated_time" content="2017-10-20T14:20:39.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paper of Erlang">
 <meta name="twitter:description" content="这几天在读Armstrong关于erlang的博士论文，这里做一点笔记。 Definition of an architecture A problem domain - what type of problem is the architecture designed to solve? A philosophy - reasoning behind the method of software">
@@ -428,6 +428,17 @@
 <li>Message should only contain constants and/or PIDs.</li>
 </ul>
 <h2 id="Essential-requirements"><a href="#Essential-requirements" class="headerlink" title="Essential requirements"></a>Essential requirements</h2><p>Concurrency, Error encapsulation, Fault detection, Fault identification, Code upgrade, Stable storage.</p>
+<h2 id="Erlang-view-of-the-world"><a href="#Erlang-view-of-the-world" class="headerlink" title="Erlang view of the world"></a>Erlang view of the world</h2><ul>
+<li>Everything is a process.</li>
+<li>Processes are strongly isolated.</li>
+<li>Process creation and destruction are lightweight.</li>
+<li>Message passing is the only way for processes to interact.</li>
+<li>Processes have unique names.</li>
+<li>If you know the name of a process you can send it a message.</li>
+<li>Processes share no resources.</li>
+<li>Error handling is non-local.</li>
+<li>Processes do what they are supposed to do or fail.</li>
+</ul>
 
       
     </div>
@@ -613,7 +624,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-of-an-architecture"><span class="nav-number">1.</span> <span class="nav-text">Definition of an architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-domain"><span class="nav-number">2.</span> <span class="nav-text">Problem domain</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Philosophy-in-brief"><span class="nav-number">3.</span> <span class="nav-text">Philosophy in brief</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Concurrency-oriented-programming"><span class="nav-number">4.</span> <span class="nav-text">Concurrency oriented programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Programming-by-observing-the-real-world"><span class="nav-number">4.1.</span> <span class="nav-text">Programming by observing the real world</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Properties-of-COPL-Concurrency-Oriented-Programming-Language"><span class="nav-number">4.2.</span> <span class="nav-text">Properties of COPL(Concurrency Oriented Programming Language)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Process-isolation"><span class="nav-number">4.3.</span> <span class="nav-text">Process isolation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Names-of-processes"><span class="nav-number">4.4.</span> <span class="nav-text">Names of processes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Message-passing"><span class="nav-number">4.5.</span> <span class="nav-text">Message passing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Essential-requirements"><span class="nav-number">5.</span> <span class="nav-text">Essential requirements</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-of-an-architecture"><span class="nav-number">1.</span> <span class="nav-text">Definition of an architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-domain"><span class="nav-number">2.</span> <span class="nav-text">Problem domain</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Philosophy-in-brief"><span class="nav-number">3.</span> <span class="nav-text">Philosophy in brief</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Concurrency-oriented-programming"><span class="nav-number">4.</span> <span class="nav-text">Concurrency oriented programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Programming-by-observing-the-real-world"><span class="nav-number">4.1.</span> <span class="nav-text">Programming by observing the real world</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Properties-of-COPL-Concurrency-Oriented-Programming-Language"><span class="nav-number">4.2.</span> <span class="nav-text">Properties of COPL(Concurrency Oriented Programming Language)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Process-isolation"><span class="nav-number">4.3.</span> <span class="nav-text">Process isolation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Names-of-processes"><span class="nav-number">4.4.</span> <span class="nav-text">Names of processes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Message-passing"><span class="nav-number">4.5.</span> <span class="nav-text">Message passing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Essential-requirements"><span class="nav-number">5.</span> <span class="nav-text">Essential requirements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Erlang-view-of-the-world"><span class="nav-number">6.</span> <span class="nav-text">Erlang view of the world</span></a></li></ol></div>
             
 
           </div>
