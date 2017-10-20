@@ -73,3 +73,13 @@ Knowing the name of a process is the key element of security.
 ## Essential requirements
 Concurrency, Error encapsulation, Fault detection, Fault identification, Code upgrade, Stable storage.
 
+## Erlang view of the world
+- Everything is a process.
+- Processes are strongly isolated.
+- Process creation and destruction are lightweight.
+- Message passing is the only way for processes to interact.
+- Processes have unique names.
+- If you know the name of a process you can send it a message.
+- Processes share no resources.
+- Error handling is non-local.
+- Processes do what they are supposed to do or fail.
