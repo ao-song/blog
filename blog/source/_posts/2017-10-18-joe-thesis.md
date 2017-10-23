@@ -83,3 +83,23 @@ Concurrency, Error encapsulation, Fault detection, Fault identification, Code up
 - Processes share no resources.
 - Error handling is non-local.
 - Processes do what they are supposed to do or fail.
+
+## Erlang error handling philosophy
+- Let some other process do the error recovery.
+- Let it crash, if you don't know how to handle the error in some situations, equally, do not program defensively, like case clause.
+
+## Programming fault-tolerace
+*If we cannot do what we want to do, then try to do something simpler.*
+
+### Supervision hierarchies
+- Supervision trees are trees of supervisors.
+- Supervisors monitor(start/stop/restart) workers and supervisors.
+- Workers are instances of behaviours.
+- Behaviours are parameterised by well-behaved functions.
+- Well-behaved functions raise exceptions when errors occur.
+
+### Well-behaved functions
+- The program should be isomorphic to the specification.
+- If the specification doesn’t say what to do raise an exception.
+- If the generated exceptions do not contain enough information to be able to isolate the error, then add additional helpful information to the exception.
+- Turn non-functional requirements into assertions (invariants) that can be checked at run-time. If the assertion is broken then raise an exception.
