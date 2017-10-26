@@ -1,5 +1,5 @@
 ---
-title: Paper of Erlang
+title: Erlang Paper
 date: 2017-10-18 11:27:43
 tags: Erlang
 categories: Programming Language
