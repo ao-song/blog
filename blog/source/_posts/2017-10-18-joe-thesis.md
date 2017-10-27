@@ -5,7 +5,7 @@ tags: Erlang
 categories: Programming Language
 ---
 
-这几天在读*Armstrong*关于*erlang*的博士论文，这里做一点笔记。
+这几天在读*Armstrong*关于*erlang*的[*博士论文*](http://erlang.org/download/armstrong_thesis_2003.pdf)，这里做一点笔记。
 
 ## Definition of an architecture
 - A problem domain \- what type of problem is the architecture designed to solve?
