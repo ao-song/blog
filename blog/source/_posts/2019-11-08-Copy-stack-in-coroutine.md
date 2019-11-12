@@ -6,9 +6,9 @@ tags: Programming
 
 Implemented a coroutine library called [fiber](https://github.com/ao-song/fiber) in c utilizing ucontext today, coroutine mostly can be used in high IO scenarios.
 
-This fiber library was implemented with stack-less fibers or called copy-stack fibers. Basically means each fiber does not have own stack but share the same one. Some ideas was borrowed from this [paper](http://akira.ruc.dk/~keld/research/COROUTINE/COROUTINE-1.0/DOC/COROUTINE_REPORT.pdf).
+This fiber library was implemented with stack-less fiber or called copy-stack fiber. Basically means each fiber does not have own stack but share the same one. Some ideas were borrowed from this [paper](http://akira.ruc.dk/~keld/research/COROUTINE/COROUTINE-1.0/DOC/COROUTINE_REPORT.pdf).
 
-The code of store and restore stack is very interesting with the char x to define the latest position in stack.
+The codes of to store and restore stack are very interesting with the char x to define the latest position in stack.
 
 > store
 ```
